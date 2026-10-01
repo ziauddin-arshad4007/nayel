@@ -1,0 +1,271 @@
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-container.sticky {
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header-line {
+    width: 98%;
+    margin: 20px auto !important;
+}
+
+.header-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.logo-img {
+    width: 100% !important;
+    transition: opacity 0.3s ease;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.header-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.header-action:hover {
+    color: #3498db;
+}
+
+.header-action i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* ============================================================
+   DESKTOP DROPDOWN
+   ============================================================ */
+.account-dropdown {
+    position: relative;
+}
+
+.account-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 20px;
+    background-color: #fff;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1001;
+}
+
+.account-dropdown:hover .account-dropdown-content,
+.account-dropdown:focus-within .account-dropdown-content,
+.account-dropdown.open .account-dropdown-content {
+    display: block;
+}
+
+.account-dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.account-dropdown-content a:hover {
+    background-color: #f8f9fa;
+}
+
+.account-dropdown:hover>.header-action i {
+    transform: rotate(180deg);
+}
+
+/* ============================================================
+   SUB DROPDOWN
+   ============================================================ */
+.has-sub-dropdown {
+    position: relative;
+}
+
+.has-sub-dropdown>a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.has-sub-dropdown:hover .sub-dropdown,
+.has-sub-dropdown:focus-within .sub-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.has-sub-dropdown i {
+    transition: transform 0.3s ease;
+}
+
+.has-sub-dropdown:hover i {
+    transform: rotate(90deg);
+}
+
+/* ============================================================
+   MOBILE TOGGLE BUTTON
+   ============================================================ */
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.toggle-button {
+    width: 45px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    padding: 8px !important;
+    cursor: pointer;
+}
+
+.toggle-button span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #000;
+    margin: 5px auto !important;
+    transition: background 0.3s ease;
+}
+
+.header-container.sticky .toggle-button span {
+    background: #000;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1099;
+}
+
+.sidebar-panel {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    transition: left 0.3s ease;
+    z-index: 1100;
+    overflow-y: auto;
+}
+
+.sidebar-panel.active {
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-links a,
+.accordion-toggle {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    text-align: start;
+    border-bottom: 1px solid #f0f0f0;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.menu-links a:hover,
+.accordion-toggle:hover {
+    background: #f8f9fa;
+}
+
+.accordion-toggle i {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.accordion-box.open .accordion-toggle i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    display: none;
+    background: #fafafa;
+}
+
+.accordion-box.open .accordion-content {
+    display: block;
+}
+
+.accordion-content a {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Prevent body scroll when sidebar open */
+body.sidebar-open {
+    overflow: hidden;
+}

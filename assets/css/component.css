@@ -1,0 +1,66 @@
+/* components.css */
+/* Only custom components. Bootstrap handles .btn and .form-control. */
+.custom-btn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ padding: 12px 22px;
+ border-radius: var(--radius-md);
+ font-weight: 600;
+ transition: var(--transition);
+}
+.custom-btn-primary {
+ background: var(--clr-primary);
+ color: var(--clr-white);
+}
+.custom-btn-primary:hover {
+ background: #3f68dc;
+ color: var(--clr-white);
+}
+.custom-btn-outline {
+ background: transparent;
+ color: var(--clr-primary);
+ border: 1px solid var(--clr-primary);
+}
+.custom-btn-outline:hover {
+ background: var(--clr-primary);
+ color: var(--clr-white);
+}
+.section-heading {
+ margin-bottom: 40px;
+}
+.section-heading .subtitle {
+ display: inline-block;
+ margin-bottom: 10px;
+ color: var(--clr-primary);
+ font-size: 14px;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: .08em;
+}
+.section-heading h2 {
+ margin-bottom: 12px;
+ color: var(--clr-dark);
+}
+.section-heading p {
+ margin-bottom: 0;
+ color: var(--clr-muted);
+}
+/* Custom form style.
+ Use .custom-form-control instead of Bootstrap .form-control. */
+.custom-form-control {
+ display: block;
+ width: 100%;
+ padding: 10px 14px;
+ border: 1px solid var(--clr-border);
+ border-radius: var(--radius-md);
+ background: var(--clr-white);
+ color: var(--clr-text);
+ transition: var(--transition);
+}
+.custom-form-control:focus {
+ outline: 0;
+ border-color: var(--clr-primary);
+ box-shadow: 0 0 0 3px rgba(83, 126, 245, .15);
+}

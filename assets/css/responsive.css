@@ -1,0 +1,26 @@
+/* responsive.css */
+/* Bootstrap already handles .container and Bootstrap grid breakpoints. */
+/* Keep only responsive rules for your custom components. */
+@media (max-width: 768px) {
+    .section {
+        padding-block: 45px !important;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding-block: 30px !important;
+    }
+
+    .custom-btn {
+        padding: 10px 18px;
+    }
+
+    .section-heading {
+        margin-bottom: 24px;
+    }
+}

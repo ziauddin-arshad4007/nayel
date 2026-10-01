@@ -1,0 +1,136 @@
+/* style.css */
+/* Bootstrap handles: .container, .row, .col-*, .btn, .form-control, etc. */
+:root {
+    --clr-primary: #537ef5;
+    --clr-secondary: #987adf;
+    --clr-accent: #e779c5;
+    --clr-dark: #111827;
+    --clr-text: #374151;
+    --clr-muted: #6b7280;
+    --clr-white: #fff;
+    --clr-black: #000;
+    --clr-light: #f8fafc;
+    --clr-border: #e5e7eb;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 999px;
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, .06);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 15px 40px rgba(0, 0, 0, .12);
+    --transition: .3s ease;
+}
+
+/* General custom styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif !important;
+    color: var(--clr-text) !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* Custom typography */
+.custom-heading,
+h1.custom-heading,
+h2.custom-heading,
+h3.custom-heading,
+h4.custom-heading,
+h5.custom-heading,
+h6.custom-heading {
+    color: var(--clr-dark);
+    line-height: 1.2;
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.custom-text {
+    color: var(--clr-text);
+}
+
+/* Custom layout utilities */
+
+
+.section {
+    padding-block: 60px !important;
+    width: 95%;
+    margin: 0px auto !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Links and buttons not using Bootstrap */
+.custom-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.custom-button-reset {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Accessibility */
+:focus-visible {
+    outline: 3px solid var(--clr-primary);
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+}
