@@ -5,7 +5,7 @@
             <div class="d-none d-lg-flex">
                 <div class="header-section">
                     <div class="logo">
-                        <img src="img/logo-2.png" id="logo" class="logo-img">
+                        <img src="assets/img/logo-new.png" id="logo" class="logo-img">
                     </div>
                     <nav class="navigation ">
                         <a class="header-action" href="index.php">Home</a>
@@ -17,36 +17,66 @@
                                 <i class="fas fa-chevron-down"
                                     style="font-size: 12px; margin-left: -2px; margin-top: 5px;"></i>
                             </a>
+
                             <div class="account-dropdown-content">
+
+                                <!-- Engineering & Design -->
                                 <div class="has-sub-dropdown">
-                                    <a href="#"> Government<i class="fas fa-chevron-right"></i></a>
+                                    <a href="#">
+                                        Engineering &amp; Design
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
 
                                     <div class="sub-dropdown">
-                                        <a href="pan.php"> PAN 2.0</a>
-                                        <a href="apaar.php"> One Student Card (APAAR / ABC)</a>
-                                        <a href="pmk.php"> PM-KUSUM</a>
-                                        <a href="pmmmsy.php"> PMMSY</a>
-                                        <a href="mame.php">MSME LEAN Program (QCI)</a>
-                                        <a href="qic.php"> QCI DRC (District Resource Centre)</a>
-                                        <a href="fostac.php"> FoSTaC – Food Safety Mitra (FSSAI)</a>
+                                        <a href="#">FEED &amp; Detailed Engineering</a>
+                                        <a href="#">EPC &amp; Project Management</a>
+                                        <a href="#">Value Engineering</a>
+                                        <a href="#">Constructability Reviews</a>
+                                        <a href="#">System Design &amp; Architecture</a>
+                                        <a href="#">SAIS &amp; NCA Compliance</a>
+                                        <a href="#">3rd Party PE Stamp</a>
                                     </div>
                                 </div>
+
+                                <!-- Contracting -->
                                 <div class="has-sub-dropdown">
-                                    <a href="#"> private <i class="fas fa-chevron-right"></i></a>
+                                    <a href="#">
+                                        Contracting
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
 
                                     <div class="sub-dropdown">
-                                        <div>
-                                            <a href="digital-services.php">Digital & IT Services</a>
-                                            <a href="business.php">Business & Consultancy</a>
-                                            <a href="real-estate.php">Real Estate & Construction</a>
-                                            <a href="healthcare.php">Healthcare & Pharma</a>
-                                            <a href="manpower.php">Manpower & Facility</a>
-                                            <a href="manpower.php">Manpower & Facility</a>
-                                            <a href="education.php">Education & Skills</a>
-                                        </div>
+                                        <a href="#">EPC Contracting</a>
+                                        <a href="#">Civil Works</a>
+                                        <a href="#">Mechanical Works</a>
+                                        <a href="#">Electrical &amp; Instrumentation</a>
+                                        <a href="#">Fire &amp; Safety Systems</a>
+                                        <a href="#">Automation &amp; SCADA</a>
+                                        <a href="#">ICT &amp; Smart Solutions</a>
+                                        <a href="#">O&amp;M Services</a>
                                     </div>
                                 </div>
+
+                                <!-- Printing -->
+                                <div class="has-sub-dropdown">
+                                    <a href="#">
+                                        Printing
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+
+                                    <div class="sub-dropdown">
+                                        <a href="#">Digital &amp; Offset Printing</a>
+                                        <a href="#">Large Format Printing</a>
+                                        <a href="#">Branding &amp; Fabrication</a>
+                                        <a href="#">Corporate Stationery</a>
+                                        <a href="#">Promotional Gifts</a>
+                                        <a href="#">Exhibition Booths &amp; Stands</a>
+                                        <a href="#">Vehicle Branding</a>
+                                    </div>
+                                </div>
+
                             </div>
+
                         </div>
 
                         <a class="header-action" href="#">Gallery</a>
@@ -55,7 +85,8 @@
 
 
                     </nav>
-                    <button>
+                    <button class="btn btn pr-3 pl-3 pt-1 pb-1 "
+                        style="border:1px solid var(--clr-primary); border-radius: 20px; color: var(--clr-primary) !important;">
                         get in touch
                     </button>
                 </div>
@@ -63,7 +94,7 @@
             <div class="d-lg-none">
                 <div class="toggle-container">
                     <div class="logo">
-                        <img src="img/logo-2.png" id="logo" class="logo-img">
+                        <img src="assets/img/logo-new.png" id="logo" class="logo-img">
                     </div>
                     <div class="toggle-container">
                         <button class="toggle-button" id="menuToggle">
@@ -89,14 +120,51 @@
             <div class="accordion-box">
                 <button class=" btn accordion-toggle">Services <i class="fas fa-chevron-down"></i></button>
                 <div class="accordion-content">
-                    <a href="service.php">Online Media Monitoring</a>
-                    <a href="service.php">Print Publication Analysis</a>
-                    <a href="service.php">Broadcast Media Tracking</a>
-                    <a href="service.php">Social Platform Intelligence</a>
-                    <a href="service.php">Emerging Channels &amp; Podcasts</a>
-                    <a href="service.php">Saudi Market Localization</a>
-                    <a href="service.php">Cultural Context &amp; Media Habits</a>
-                    <a href="service.php">Regional Coverage (Riyadh, Jeddah, Eastern Province)</a>
+                    <div class="accordion-box-sub">
+                        <button class=" btn accordion-toggle-sub"> Engineering &amp; Design <i
+                                class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-box-sub">
+                            <div class="accordion-content-sub">
+                                <a href="#">FEED &amp; Detailed Engineering</a>
+                                <a href="#">EPC &amp; Project Management</a>
+                                <a href="#">Value Engineering</a>
+                                <a href="#">Constructability Reviews</a>
+                                <a href="#">System Design &amp; Architecture</a>
+                                <a href="#">SAIS &amp; NCA Compliance</a>
+                                <a href="#">3rd Party PE Stamp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-box-sub">
+                        <button class=" btn accordion-toggle-sub"> Contracting <i
+                                class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-box-sub">
+                            <div class="accordion-content-sub">
+                                <a href="#">EPC Contracting</a>
+                                <a href="#">Civil Works</a>
+                                <a href="#">Mechanical Works</a>
+                                <a href="#">Electrical &amp; Instrumentation</a>
+                                <a href="#">Fire &amp; Safety Systems</a>
+                                <a href="#">Automation &amp; SCADA</a>
+                                <a href="#">ICT &amp; Smart Solutions</a>
+                                <a href="#">O&amp;M Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-box-sub">
+                        <button class=" btn accordion-toggle-sub"> Printing <i class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-box-sub">
+                            <div class="accordion-content-sub">
+                                <a href="#">Digital &amp; Offset Printing</a>
+                                <a href="#">Large Format Printing</a>
+                                <a href="#">Branding &amp; Fabrication</a>
+                                <a href="#">Corporate Stationery</a>
+                                <a href="#">Promotional Gifts</a>
+                                <a href="#">Exhibition Booths &amp; Stands</a>
+                                <a href="#">Vehicle Branding</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -136,7 +204,19 @@
     }
 
     /* Accordion */
+
+    /* Main Accordion */
     document.querySelectorAll('.accordion-toggle').forEach(btn => {
-        btn.onclick = () => btn.closest('.accordion-box').classList.toggle('open');
+        btn.onclick = () => {
+            btn.closest('.accordion-box').classList.toggle('open');
+        };
     });
+
+    /* Sub Accordion */
+    document.querySelectorAll('.accordion-toggle-sub').forEach(btn => {
+        btn.onclick = () => {
+            btn.closest('.accordion-box-sub').classList.toggle('open-sub');
+        };
+    });
+
 </script>

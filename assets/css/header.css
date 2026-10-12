@@ -6,18 +6,19 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: transparent;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    background: var(--clr-white);
+    backdrop-filter: blur(5px);
+    transition: background var(--transition), box-shadow var(--transition);
 }
 
 .header-container.sticky {
     background: #fff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-lg);
 }
 
 .header-line {
-    width: 98%;
-    margin: 20px auto !important;
+    width: 93%;
+    margin: 0px auto !important;
 }
 
 .header-section {
@@ -33,7 +34,8 @@
 
 .logo-img {
     width: 100% !important;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition);
+    padding: 5px 0px !important;
 }
 
 /* ============================================================
@@ -41,7 +43,9 @@
    ============================================================ */
 .navigation {
     display: flex;
-    gap: 40px;
+    gap: 45px;
+   
+
 }
 
 .header-action {
@@ -50,13 +54,13 @@
     gap: 8px;
     text-decoration: none;
     color: #000;
-    transition: color 0.3s ease;
+    transition: color var(--transition);
     position: relative;
     cursor: pointer;
     background: none;
     border: none;
     font: inherit;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .header-action:hover {
@@ -65,7 +69,7 @@
 
 .header-action i {
     font-size: 12px;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition);
 }
 
 /* ============================================================
@@ -80,10 +84,10 @@
     position: absolute;
     top: 100%;
     left: 0;
-    padding-top: 20px;
+    padding-top: 20px !important;
     background-color: #fff;
     min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     border-radius: 4px;
     z-index: 1001;
 }
@@ -96,7 +100,7 @@
 
 .account-dropdown-content a {
     display: block;
-    padding: 8px 16px;
+    padding: 8px 16px !important;
     color: #333;
     text-decoration: none;
     transition: background 0.2s ease;
@@ -129,13 +133,13 @@
     left: 100%;
     background: #fff;
     min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     border-radius: 4px;
-    padding: 10px 0;
+    padding: 10px 0 !important;
     opacity: 0;
     visibility: hidden;
     transform: translateX(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    transition: opacity var(--transition), transform var(--transition), visibility 0.3s;
 }
 
 .has-sub-dropdown:hover .sub-dropdown,
@@ -146,7 +150,7 @@
 }
 
 .has-sub-dropdown i {
-    transition: transform 0.3s ease;
+    transition: transform var(--transition);
 }
 
 .has-sub-dropdown:hover i {
@@ -160,7 +164,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    
 }
 
 .toggle-button {
@@ -178,7 +182,7 @@
     height: 3px;
     background: #000;
     margin: 5px auto !important;
-    transition: background 0.3s ease;
+    transition: background var(--transition);
 }
 
 .header-container.sticky .toggle-button span {
@@ -203,7 +207,7 @@
     width: 280px;
     height: 100vh;
     background: #fff;
-    transition: left 0.3s ease;
+    transition: left var(--transition);
     z-index: 1100;
     overflow-y: auto;
 }
@@ -216,14 +220,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem !important;
     border-bottom: 1px solid #ddd;
 }
 
 .menu-links a,
-.accordion-toggle {
+.accordion-toggle,
+.accordion-toggle-sub {
     display: block;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1rem !important;
     text-decoration: none;
     color: #333;
     width: 100%;
@@ -244,14 +249,22 @@
 
 .accordion-toggle i {
     float: right;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition);
+}
+.accordion-toggle-sub i {
+    float: right;
+    transition: transform var(--transition);
 }
 
 .accordion-box.open .accordion-toggle i {
     transform: rotate(180deg);
 }
 
-.accordion-content {
+.accordion-box-sub.open-sub .accordion-toggle-sub i {
+    transform: rotate(180deg);
+}
+.accordion-content,
+.accordion-content-sub {
     display: none;
     background: #fafafa;
 }
@@ -259,13 +272,21 @@
 .accordion-box.open .accordion-content {
     display: block;
 }
-
+.accordion-box-sub.open-sub .accordion-content-sub {
+    display: block;
+}
 .accordion-content a {
-    padding-left: 2rem;
+    padding-left: 2rem !important;
     font-size: 0.9rem;
 }
-
+.accordion-content-sub a {
+    padding-left: 2rem !important;
+    font-size: 0.9rem;
+}
 /* Prevent body scroll when sidebar open */
 body.sidebar-open {
     overflow: hidden;
+}
+.logo{
+    width: 110px !important;
 }
