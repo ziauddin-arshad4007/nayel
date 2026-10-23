@@ -44,7 +44,7 @@
 .navigation {
     display: flex;
     gap: 45px;
-   
+
 
 }
 
@@ -132,7 +132,11 @@
     top: 0;
     left: 100%;
     background: #fff;
-    min-width: 220px;
+    min-width: 300px;
+    height: 450px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--clr-dust) transparent;
     box-shadow: var(--shadow-sm);
     border-radius: 4px;
     padding: 10px 0 !important;
@@ -141,7 +145,23 @@
     transform: translateX(10px);
     transition: opacity var(--transition), transform var(--transition), visibility 0.3s;
 }
+/* Chrome, Edge, Safari */
+.sub-dropdown::-webkit-scrollbar {
+    width: 5px;
+}
 
+.sub-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sub-dropdown::-webkit-scrollbar-thumb {
+    background-color: var(--clr-dust);
+    border-radius: 10px;
+}
+
+.sub-dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: var(--clr-primary);
+}
 .has-sub-dropdown:hover .sub-dropdown,
 .has-sub-dropdown:focus-within .sub-dropdown {
     opacity: 1;
@@ -164,7 +184,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .toggle-button {
@@ -251,6 +271,7 @@
     float: right;
     transition: transform var(--transition);
 }
+
 .accordion-toggle-sub i {
     float: right;
     transition: transform var(--transition);
@@ -263,6 +284,7 @@
 .accordion-box-sub.open-sub .accordion-toggle-sub i {
     transform: rotate(180deg);
 }
+
 .accordion-content,
 .accordion-content-sub {
     display: none;
@@ -272,21 +294,26 @@
 .accordion-box.open .accordion-content {
     display: block;
 }
+
 .accordion-box-sub.open-sub .accordion-content-sub {
     display: block;
 }
+
 .accordion-content a {
     padding-left: 2rem !important;
     font-size: 0.9rem;
 }
+
 .accordion-content-sub a {
     padding-left: 2rem !important;
     font-size: 0.9rem;
 }
+
 /* Prevent body scroll when sidebar open */
 body.sidebar-open {
     overflow: hidden;
 }
-.logo{
+
+.logo {
     width: 110px !important;
 }

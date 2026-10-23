@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Surface Restorizers | Home Page </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link href="assets/img/new-logo.png" sizes="158x158" rel="shortcut icon" type="image/x-icon">
   <link href="assets/img/new-logo.png" sizes="158x158" rel="shortcut icon">
   <!-- CSS -->
@@ -14,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/component.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
 <body>
@@ -101,7 +103,7 @@
             From FEED and detailed design to acoustic modelling, Wi-Fi surveys, and cybersecurity architecture.
             We deliver compliant, future-ready solutions.
           </p>
-          <a href="#" class="growth-btn">
+          <a href="engineering-design.php" class="growth-btn">
             Discover Engineering Services
             <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
           </a>
@@ -118,7 +120,7 @@
             End-to-end Engineering, Procurement, and Construction. Civil, Mechanical, Electrical,
             Instrumentation, Fire Safety, and 4S Safety Command Centers.
           </p>
-          <a href="#" class="growth-btn">
+          <a href="contracting.php" class="growth-btn">
             View Contracting Projects
             <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
           </a>
@@ -135,7 +137,7 @@
             Professional design, digital &amp; offset printing, large format fabrication,
             and premium promotional gifts to elevate your brand identity.
           </p>
-          <a href="#" class="growth-btn">
+          <a href="printing.php" class="growth-btn">
             Explore Printing Solutions
             <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
           </a>
@@ -213,7 +215,54 @@
       </div>
     </div>
   </section>
+  <!--------------------------------------------- Industries We Serve section start  -------------------------------------------------->
 
+  <section class="growth-section">
+    <div class="section">
+      <div class="industry-slider-section">
+
+        <h2 class="heading-1">
+          <span> Industries We Serve</span>
+        </h2>
+
+        <h2 class="heading-2">
+          Engineering Excellence Across Every Industry
+        </h2>
+
+        <p class="section-discription pb-5">
+          Nayel delivers integrated EPC, construction, engineering, and technology
+          solutions across oil and gas, power generation, water treatment,
+          infrastructure, smart cities, healthcare, education, and telecommunications.
+          Combining technical expertise, safety-driven execution, and innovative
+          technologies, we build reliable, efficient, and sustainable solutions
+          tailored to the evolving needs of industries across Saudi Arabia and beyond.
+        </p>
+        <!-- SLIDER WRAPPER -->
+        <div class="industry-slider-wrapper">
+
+          <!-- PREVIOUS BUTTON -->
+          <button class="industry-slider-btn industry-prev" id="industrySliderPrev" aria-label="Previous services"
+            type="button">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <!-- SLIDER TRACK -->
+          <div class="industry-slider-track" id="industrySliderTrack">
+            <!-- Cards generated using JavaScript -->
+          </div>
+
+          <!-- NEXT BUTTON -->
+          <button class="industry-slider-btn industry-next" id="industrySliderNext" aria-label="Next services"
+            type="button">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------------------------------------  Our ISO Certificates section start  -------------------------------------------------->
   <section class="growth-section">
     <div class="section">
       <div class="row align-items-center">
@@ -348,11 +397,18 @@
 
 
   <?php include 'footer.php'; ?>
-  <script>
 
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-      // All hero slider content is managed here
+      // Automatically detect the project base path.
+      // Local: /nayel/
+      // Live:  /
+      const assetBase = window.location.pathname.startsWith("/nayel/")
+        ? "/nayel/assets/img/"
+        : "/assets/img/";
+
+      // All hero slider content
       const slides = [
         {
           badge: "CONTRACTING",
@@ -361,7 +417,7 @@
             "From EPC and construction to civil, mechanical, electrical, security, and O&M, we deliver comprehensive contracting solutions for complex and diverse projects.",
           buttonText: "Start Monitoring Today",
           pingColor: "#22c55e",
-          background: "/nayel/assets/img/printing-right-1.png"
+          background: assetBase + "printing-right-1.webp"
         },
         {
           badge: "ENGINEERING & DESIGN",
@@ -370,7 +426,7 @@
             "We provide technical studies, systems integration, and expert consultancy to turn your vision into reliable, efficient, and sustainable solutions.",
           buttonText: "Explore Our Solutions",
           pingColor: "#3b82f6",
-          background: "/nayel/assets/img/printing-right-2.png"
+          background: assetBase + "printing-right-2.webp"
         },
         {
           badge: "PRINTING",
@@ -379,10 +435,11 @@
             "From digital and UV printing to laser cutting, fabric printing, offset printing, and plotter cutting — we bring your brand to life with precision and quality.",
           buttonText: "Discover Our Services",
           pingColor: "#f59e0b",
-          background: "/nayel/assets/img/printing-right-3.png"
+          background: assetBase + "printing-right-3.webp"
         }
       ];
 
+      // Get hero elements
       const heroSection = document.getElementById("heroSection");
       const heroBadgeText = document.getElementById("heroBadgeText");
       const heroTitle = document.getElementById("heroTitle");
@@ -394,9 +451,49 @@
       const prevButton = document.getElementById("sliderPrev");
       const nextButton = document.getElementById("sliderNext");
 
+      // Stop safely if required elements are missing
+      if (
+        !heroSection ||
+        !heroBadgeText ||
+        !heroTitle ||
+        !heroDescription ||
+        !heroPing ||
+        !heroDot ||
+        !heroCTA ||
+        !prevButton ||
+        !nextButton
+      ) {
+        console.error("Hero slider: One or more required HTML elements are missing.");
+        return;
+      }
+
       let currentSlide = 0;
+      let animationTimer;
 
+      // Set background and preload the image
+      function setHeroBackground(slide) {
+        const imageUrl = slide.background;
 
+        heroSection.style.setProperty(
+          "--hero-bg",
+          `url("${imageUrl}")`
+        );
+
+        // Log image loading errors in the browser console
+        const image = new Image();
+
+        image.onload = function () {
+          console.log("Hero background loaded:", imageUrl);
+        };
+
+        image.onerror = function () {
+          console.error("Hero background failed to load:", imageUrl);
+        };
+
+        image.src = imageUrl;
+      }
+
+      // Update the displayed slide
       function showSlide(index) {
         if (heroSection.dataset.animating === "true") return;
 
@@ -404,38 +501,45 @@
 
         const content = heroSection.querySelector(".hero-content");
 
-        // Fade out and slide down slightly
-        content.classList.add("is-changing");
+        if (content) {
+          content.classList.add("is-changing");
+        }
 
-        setTimeout(() => {
+        clearTimeout(animationTimer);
+
+        animationTimer = setTimeout(function () {
           currentSlide = (index + slides.length) % slides.length;
 
           const slide = slides[currentSlide];
 
-          // Update slide content
+          // Update text content
           heroBadgeText.textContent = slide.badge;
           heroTitle.textContent = slide.title;
           heroDescription.textContent = slide.description;
 
-          // Update CTA text without removing the arrow icon
+          // Update CTA text while preserving its arrow icon
           const arrow = heroCTA.querySelector("span");
-          heroCTA.textContent = slide.buttonText + " ";
-          if (arrow) heroCTA.appendChild(arrow);
 
-          // Update ping and dot colors
+          heroCTA.textContent = slide.buttonText + " ";
+
+          if (arrow) {
+            heroCTA.appendChild(arrow);
+          }
+
+          // Update indicator colors
           heroPing.style.backgroundColor = slide.pingColor;
           heroDot.style.backgroundColor = slide.pingColor;
 
-          // Update background image
-          heroSection.style.setProperty(
-            "--hero-bg",
-            `url("${slide.background}")`
-          );
+          // Update the background image
+          setHeroBackground(slide);
 
           // Fade content back in
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              content.classList.remove("is-changing");
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              if (content) {
+                content.classList.remove("is-changing");
+              }
+
               heroSection.dataset.animating = "false";
             });
           });
@@ -443,22 +547,222 @@
         }, 350);
       }
 
+      // Initialize the first slide immediately
+      heroSection.dataset.animating = "false";
 
-      // Next slide
-      nextButton.addEventListener("click", function () {
-        showSlide(currentSlide + 1);
-      });
+      const firstSlide = slides[0];
+
+      heroBadgeText.textContent = firstSlide.badge;
+      heroTitle.textContent = firstSlide.title;
+      heroDescription.textContent = firstSlide.description;
+      heroPing.style.backgroundColor = firstSlide.pingColor;
+      heroDot.style.backgroundColor = firstSlide.pingColor;
+
+      setHeroBackground(firstSlide);
 
       // Previous slide
       prevButton.addEventListener("click", function () {
         showSlide(currentSlide - 1);
       });
 
-      // Load the first slide on page load
-      showSlide(currentSlide);
+      // Next slide
+      nextButton.addEventListener("click", function () {
+        showSlide(currentSlide + 1);
+      });
 
     });
+  </script>
 
+  <script>
+    (function () {
+      const industryServices = [
+        {
+          image: "assets/img/oil-and-gas.webp",
+          imageAlt: "Oil and gas industrial facilities",
+          icon: "fas fa-oil-well",
+          title: "Oil & Gas",
+          description:
+            "Upstream and downstream oil and gas facilities, pipelines, refineries, and petrochemical plants with full EPC capabilities.",
+
+        },
+        {
+          image: "assets/img/power-generation.webp",
+          imageAlt: "Power generation plant and infrastructure",
+          icon: "fas fa-bolt",
+          title: "Power Generation",
+          description:
+            "Power plants, substations, transmission lines, and energy infrastructure supporting reliable generation and distribution.",
+
+        },
+        {
+          image: "assets/img/water-treatment.webp",
+          imageAlt: "Water treatment and desalination facility",
+          icon: "fas fa-water",
+          title: "Water Treatment",
+          description:
+            "Water treatment plants, desalination facilities, irrigation networks, and wastewater management infrastructure.",
+
+        },
+        // {
+        //   image: "assets/img/industries/infrastructure-roads.jpg",
+        //   imageAlt: "Highways and modern road infrastructure",
+        //   icon: "fas fa-road",
+        //   title: "Infrastructure & Roads",
+        //   description:
+        //     "Highways, bridges, roads, tunnels, and urban infrastructure development delivered with comprehensive civil construction expertise.",
+
+        // },
+        {
+          image: "assets/img/construction.webp",
+          imageAlt: "Commercial and industrial construction project",
+          icon: "fas fa-hard-hat",
+          title: "Construction & Infrastructure",
+          description:
+            "Civil, structural, and architectural works for commercial, residential, industrial, and public infrastructure projects across the Kingdom.",
+
+        },
+        {
+          image: "assets/img/smart city.webp",
+          imageAlt: "Smart city infrastructure and connected urban systems",
+          icon: "fas fa-city",
+          title: "Smart Cities",
+          description:
+            "Integrated ICT, automation, and intelligent infrastructure solutions supporting connected, efficient, and future-ready urban environments.",
+
+        },
+        {
+          image: "assets/img/health-care.webp",
+          imageAlt: "Modern healthcare facility and hospital infrastructure",
+          icon: "fas fa-hospital",
+          title: "Healthcare",
+          description:
+            "Infrastructure, ICT systems, security, and integrated technology solutions for hospitals, clinics, and modern healthcare facilities.",
+
+        },
+        {
+          image: "assets/img/education.webp",
+          imageAlt: "Modern educational institution and campus",
+          icon: "fas fa-graduation-cap",
+          title: "Education",
+          description:
+            "Reliable infrastructure, networking, security, and technology solutions for schools, universities, campuses, and educational institutions.",
+
+        },
+        {
+          image: "assets/img/telecom.webp",
+          imageAlt: "Telecommunications network and connectivity infrastructure",
+          icon: "fas fa-broadcast-tower",
+          title: "Telecom",
+          description:
+            "Telecommunications infrastructure, structured cabling, fiber-optic networks, and ICT solutions that enable reliable connectivity and digital communication.",
+
+        }
+      ];
+
+      const industryTrack = document.getElementById("industrySliderTrack");
+      const industryPrev = document.getElementById("industrySliderPrev");
+      const industryNext = document.getElementById("industrySliderNext");
+
+      if (!industryTrack || !industryPrev || !industryNext) return;
+
+      industryTrack.innerHTML = industryServices.map(service => `
+        <div class="industry-slider-item">
+            <a class="industry-card-content" >
+                <div class="card industry-card-services">
+
+                    <img
+                        src="${service.image}"
+                        alt="${service.imageAlt}"
+                    >
+
+                    <div class="industry-icon-wrapper">
+                        <div class="industry-icon-circle">
+                            <i class="${service.icon}" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="industry-card-body-custom">
+                        <h4>${service.title}</h4>
+                        <p>${service.description}</p>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+    `).join("");
+
+      // Calculate the scroll distance for one card.
+      function getIndustryScrollAmount() {
+        const firstItem = industryTrack.querySelector(".industry-slider-item");
+
+        if (!firstItem) return 300;
+
+        const gap = parseFloat(
+          window.getComputedStyle(industryTrack).gap
+        ) || 0;
+
+        return firstItem.offsetWidth + gap;
+      }
+
+      // Previous card.
+      industryPrev.addEventListener("click", function () {
+        industryTrack.scrollBy({
+          left: -getIndustryScrollAmount(),
+          behavior: "smooth"
+        });
+      });
+
+      // Next card.
+      industryNext.addEventListener("click", function () {
+        industryTrack.scrollBy({
+          left: getIndustryScrollAmount(),
+          behavior: "smooth"
+        });
+      });
+
+      // Keyboard navigation.
+      industryTrack.setAttribute("tabindex", "0");
+
+      industryTrack.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          industryPrev.click();
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          industryNext.click();
+        }
+      });
+
+      // Prevent unwanted mouse-down behavior.
+      industryPrev.addEventListener("mousedown", function (event) {
+        event.preventDefault();
+      });
+
+      industryNext.addEventListener("mousedown", function (event) {
+        event.preventDefault();
+      });
+
+      // Update navigation button states.
+      function updateIndustryArrows() {
+        const scrollLeft = industryTrack.scrollLeft;
+        const maxScroll = industryTrack.scrollWidth - industryTrack.clientWidth;
+
+        industryPrev.style.opacity = scrollLeft <= 5 ? "0.4" : "1";
+        industryPrev.style.pointerEvents = scrollLeft <= 5 ? "none" : "auto";
+
+        industryNext.style.opacity =
+          scrollLeft >= maxScroll - 5 ? "0.4" : "1";
+
+        industryNext.style.pointerEvents =
+          scrollLeft >= maxScroll - 5 ? "none" : "auto";
+      }
+
+      window.addEventListener("load", updateIndustryArrows);
+      window.addEventListener("resize", updateIndustryArrows);
+      industryTrack.addEventListener("scroll", updateIndustryArrows);
+
+      updateIndustryArrows();
+    })();
   </script>
   <!-- Bootstrap JS -->
   <!-- jQuery (required for Bootstrap 4) -->

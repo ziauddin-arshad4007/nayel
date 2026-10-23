@@ -5,11 +5,11 @@
             <div class="d-none d-lg-flex">
                 <div class="header-section">
                     <div class="logo">
-                        <img src="assets/img/logo-new.png" id="logo" class="logo-img">
+                        <img src="assets/img/logo-new.webp" id="logo" class="logo-img">
                     </div>
                     <nav class="navigation ">
                         <a class="header-action" href="index.php">Home</a>
-                        <a class="header-action" href="about-us.php">Who we are </a>
+                        <a class="header-action" href="about-us.php">About us </a>
 
                         <div class="account-dropdown" style="cursor:pointer">
                             <a class="header-action">
@@ -28,13 +28,15 @@
                                     </a>
 
                                     <div class="sub-dropdown">
-                                        <a href="#">FEED &amp; Detailed Engineering</a>
-                                        <a href="#">EPC &amp; Project Management</a>
-                                        <a href="#">Value Engineering</a>
-                                        <a href="#">Constructability Reviews</a>
-                                        <a href="#">System Design &amp; Architecture</a>
-                                        <a href="#">SAIS &amp; NCA Compliance</a>
-                                        <a href="#">3rd Party PE Stamp</a>
+                                        <a href="telecom-ict.php">Telecommunications & ICT Infrastructure</a>
+                                        <a href="elv-safety-systems.php">Safety Notification & ELV Systems</a>
+                                        <a href="engineering-surveys-studies.php">Engineering Surveys & Technical
+                                            Studies</a>
+                                        <a href="security-sais-contracting.php">Security Systems & SAIS Contracting</a>
+                                        <a href="cybersecurity-compliance.php">Cybersecurity Governance & Compliance</a>
+                                        <a href="4s-smart-site-safety.php">4S Smart Site Safety System</a>
+                                        <a href="audiovisual.php">Audiovisual & Control-Room Systems</a>
+                                        <a href="telecom-infrastructure.php">Telecom Infrastructure & Support</a>
                                     </div>
                                 </div>
 
@@ -46,14 +48,13 @@
                                     </a>
 
                                     <div class="sub-dropdown">
-                                        <a href="#">EPC Contracting</a>
-                                        <a href="#">Civil Works</a>
-                                        <a href="#">Mechanical Works</a>
-                                        <a href="#">Electrical &amp; Instrumentation</a>
-                                        <a href="#">Fire &amp; Safety Systems</a>
-                                        <a href="#">Automation &amp; SCADA</a>
-                                        <a href="#">ICT &amp; Smart Solutions</a>
-                                        <a href="#">O&amp;M Services</a>
+                                        <a href="contracting-epc.php">EPC Contracting</a>
+                                        <a href="civil-works.php">Civil Works</a>
+                                        <a href="mechanical-works.php">Mechanical Works</a>
+                                        <a href="electrical-instrumentation.php">Electrical &amp; Instrumentation</a>
+                                        <a href="fire-safety.php">Fire &amp; Safety Systems</a>
+                                        <a href="automation-digital-solutions.php">Automation &amp; ICT</a>
+
                                     </div>
                                 </div>
 
@@ -65,13 +66,14 @@
                                     </a>
 
                                     <div class="sub-dropdown">
-                                        <a href="#">Digital &amp; Offset Printing</a>
-                                        <a href="#">Large Format Printing</a>
-                                        <a href="#">Branding &amp; Fabrication</a>
-                                        <a href="#">Corporate Stationery</a>
-                                        <a href="#">Promotional Gifts</a>
-                                        <a href="#">Exhibition Booths &amp; Stands</a>
-                                        <a href="#">Vehicle Branding</a>
+                                        <a href="commercial.php">Commercial & Digital Printing</a>
+                                        <a href="large-format.php">Large-Format Printing & Advertising</a>
+                                        <a href="signage.php">Signage &  Engraving</a>
+                                        <a href="promotional.php">Promotional Branding & Merchandise</a>
+                                        <a href="fabric.php">Fabric Printing & Textile Branding</a>
+                                        <a href="gifts-awards.php">Corporate Gifts & Awards</a>
+                                        <a href="event-exhibition.php">Event & Exhibition Displays</a>
+                                        <a href="cutting-finishing6.php">Cutting, Finishing & Production</a>
                                     </div>
                                 </div>
 
@@ -79,7 +81,7 @@
 
                         </div>
 
-                        <a class="header-action" href="#">Gallery</a>
+              
 
                         <a class="header-action" href="contact_us.php">Contact us</a>
 
@@ -94,7 +96,7 @@
             <div class="d-lg-none">
                 <div class="toggle-container">
                     <div class="logo">
-                        <img src="assets/img/logo-new.png" id="logo" class="logo-img">
+                        <img src="assets/img/logo-new.webp" id="logo" class="logo-img">
                     </div>
                     <div class="toggle-container">
                         <button class="toggle-button" id="menuToggle">
@@ -125,13 +127,14 @@
                                 class="fas fa-chevron-down"></i></button>
                         <div class="accordion-box-sub">
                             <div class="accordion-content-sub">
-                                <a href="#">FEED &amp; Detailed Engineering</a>
-                                <a href="#">EPC &amp; Project Management</a>
-                                <a href="#">Value Engineering</a>
-                                <a href="#">Constructability Reviews</a>
-                                <a href="#">System Design &amp; Architecture</a>
-                                <a href="#">SAIS &amp; NCA Compliance</a>
-                                <a href="#">3rd Party PE Stamp</a>
+                                <a href="telecom-ict.php">Telecommunications & ICT Infrastructure</a>
+                                <a href="elv-safety-systems.php">Safety Notification & ELV Systems</a>
+                                <a href="engineering-surveys-studies.php">Engineering Surveys & Technical Studies</a>
+                                <a href="security-sais-contracting.php">Security Systems & SAIS Contracting</a>
+                                <a href="cybersecurity-compliance.php">Cybersecurity Governance & Compliance</a>
+                                <a href="4s-smart-site-safety.php">4S Smart Site Safety System</a>
+                                <a href="audiovisual.php">Audiovisual & Control-Room Systems</a>
+                                <a href="telecom-infrastructure.php">Telecom Infrastructure & Support</a>
                             </div>
                         </div>
                     </div>
@@ -140,14 +143,12 @@
                                 class="fas fa-chevron-down"></i></button>
                         <div class="accordion-box-sub">
                             <div class="accordion-content-sub">
-                                <a href="#">EPC Contracting</a>
-                                <a href="#">Civil Works</a>
-                                <a href="#">Mechanical Works</a>
-                                <a href="#">Electrical &amp; Instrumentation</a>
-                                <a href="#">Fire &amp; Safety Systems</a>
-                                <a href="#">Automation &amp; SCADA</a>
-                                <a href="#">ICT &amp; Smart Solutions</a>
-                                <a href="#">O&amp;M Services</a>
+                                <a href="contracting-epc.php">EPC Contracting</a>
+                                <a href="civil-works.php">Civil Works</a>
+                                <a href="mechanical-works.php">Mechanical Works</a>
+                                <a href="electrical-instrumentation.php">Electrical &amp; Instrumentation</a>
+                                <a href="fire-safety.php">Fire &amp; Safety Systems</a>
+                                <a href="automation-digital-solutions.php">Automation &amp; ICT</a>
                             </div>
                         </div>
                     </div>
@@ -155,13 +156,14 @@
                         <button class=" btn accordion-toggle-sub"> Printing <i class="fas fa-chevron-down"></i></button>
                         <div class="accordion-box-sub">
                             <div class="accordion-content-sub">
-                                <a href="#">Digital &amp; Offset Printing</a>
-                                <a href="#">Large Format Printing</a>
-                                <a href="#">Branding &amp; Fabrication</a>
-                                <a href="#">Corporate Stationery</a>
-                                <a href="#">Promotional Gifts</a>
-                                <a href="#">Exhibition Booths &amp; Stands</a>
-                                <a href="#">Vehicle Branding</a>
+                                <a href="commercial.php">Commercial & Digital Printing</a>
+                                <a href="large-format.php">Large-Format Printing & Advertising</a>
+                                <a href="elv-safety-systems.php">Signage &  Engraving </a>
+                                <a href="promotional.php">Promotional Branding & Merchandise</a>
+                                <a href="fabric.php">Fabric Printing & Textile Branding</a>
+                                <a href="gifts-awards.php">Corporate Gifts & Awards</a>
+                                <a href="event-exhibition.php">Event & Exhibition Displays</a>
+                                <a href="cutting-finishing6.php">Cutting, Finishing & Production</a>
                             </div>
                         </div>
                     </div>

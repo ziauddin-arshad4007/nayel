@@ -13,11 +13,16 @@
         margin: 0 !important;
     }
 
+    /* .industry-slider-item {
+        flex: 0 0 calc(33.333% - 1.25rem);
+    } */
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
 
-    .growth-cards {
+    .growth-cards,
+    .growth-cards-1 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 25px;
     }
@@ -40,6 +45,10 @@
 
     .growth-icon i {
         font-size: 26px;
+    }
+
+    .industry-slider-item {
+        flex: 0 0 calc(50% - 1.25rem);
     }
 
 }
@@ -92,12 +101,14 @@
         margin-bottom: 30px;
     }
 
-    .growth-cards {
+    .growth-cards,
+    .growth-cards-1 {
         grid-template-columns: minmax(0, 1fr);
         gap: 20px;
     }
 
-    .growth-card {
+    .growth-card,
+    .growth-card-1 {
         width: 100%;
         max-width: 100%;
         min-width: 0;
@@ -125,10 +136,77 @@
         width: 50%;
     }
 
+    .value-cards {
+        justify-content: start !important;
+        flex-wrap: wrap;
+    }
+
+    .value-cards>* {
+        border-bottom: 1px !important;
+        width: 100% !important;
+        padding: 10px 20px !important;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .engineering-services {
+        padding: 25px 0 !important;
+    }
+
+    .engineering-services .services-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .engineering-services .service-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 16px;
+        min-height: auto;
+        padding: 20px !important;
+
+    }
+
+
+
+    .engineering-services .service-content h3 {
+        margin-bottom: 8px !important;
+        font-size: 17px;
+    }
+
+    .engineering-services .service-content p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .engineering-services .service-arrow {
+        width: 36px;
+        height: 36px;
+        margin-top: 0 !important;
+    }
+
+    /* Right arrow becomes down arrow */
+    .engineering-services .service-arrow i::before {
+        content: "\f063";
+    }
+
+    /* Down arrow hover movement */
+    .engineering-services .service-card:hover .service-arrow {
+        transform: translateY(3px) rotate(0deg);
+    }
+
 }
 
 @media (max-width: 576px) {
 
+    .inner-hero {
+        min-height: 220px;
+        padding: 35px 0 !important;
+    }
 
     .custom-btn {
         padding: 10px 18px;
@@ -138,12 +216,14 @@
         margin-bottom: 24px;
     }
 
-    .growth-cards {
+    .growth-cards,
+    .growth-cards-1 {
         grid-template-columns: minmax(0, 1fr);
         gap: 18px;
     }
 
-    .growth-card {
+    .growth-card,
+    .growth-card-1 {
         width: 100%;
         max-width: 100%;
         min-width: 0;
@@ -154,7 +234,8 @@
         border-radius: 28px;
     }
 
-    .growth-icon {
+    .growth-icon,
+    .growth-icon-1 {
         width: 52px;
         height: 52px;
 
@@ -165,13 +246,70 @@
         margin: 0 0 19px 0 !important;
     }
 
-    .growth-icon i {
-        font-size: 24px;
+
+    .growth-icon i,
+    .growth-icon-1 i {
+        font-size: 22px;
     }
 
     .heading-1,
     .heading-2 {
         line-height: 1.25;
         padding-bottom: 10px !important;
+    }
+
+    .industry-slider-item {
+        flex: 0 0 calc(100% - 1.25rem);
+    }
+
+    .industry-slider-wrapper {
+        padding: 0 30px !important;
+    }
+
+    .adv-features-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    .adv-feature-item {
+        padding: 0.8rem 1rem 0.8rem 1.2rem !important;
+    }
+
+    .engineering-services {
+        padding: 20px 0 !important;
+    }
+
+    .engineering-services .service-card {
+        gap: 12px;
+        padding: 16px !important;
+    }
+
+    .engineering-services .service-content h3 {
+        font-size: 16px;
+    }
+
+    .engineering-services .service-content p {
+        font-size: 13px;
+    }
+
+    .engineering-services .service-arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    .invest-section {
+        padding: 0rem !important;
+    }
+
+    .invest-section .epc-invest-card {
+        padding: 0.875rem !important;
+    }
+
+    .epc-invest-card-text {
+        padding: 5px !important;
+    }
+
+    .epc-invest-card-container {
+        padding: 0px !important;
     }
 }
